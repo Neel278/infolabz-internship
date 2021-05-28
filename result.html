@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <table border width="600px">
+        <script>
+            if(studentData.physics >= 40){
+                document.write("<tr ><td>1</td><td>Physics</td><td>"+studentData.physics+"</td></tr>");
+            }else{
+                document.write("<tr bgcolor='red'><td>1</td><td>Physics</td><td>"+studentData.physics+"</td></tr>");
+            }
+            if(studentData.chemistry >= 40){
+                document.write("<tr ><td>2</td><td>Chemistry</td><td>"+studentData.chemistry+"</td></tr>");
+            }else{
+                document.write("<tr bgcolor='red'><td>2</td><td>Chemistry</td><td>"+studentData.chemistry+"</td></tr>");
+            }
+            if(studentData.math >= 40){
+                document.write("<tr ><td>3</td><td>math</td><td>"+studentData.math+"</td></tr>");
+            }else{
+                document.write("<tr bgcolor='red'><td>3</td><td>math</td><td>"+studentData.math+"</td></tr>");
+            }
+            if(studentData.english >= 40){
+                document.write("<tr ><td>4</td><td>english</td><td>"+studentData.english+"</td></tr>");
+            }else{
+                document.write("<tr bgcolor='red'><td>4</td><td>english</td><td>"+studentData.english+"</td></tr>");
+            }
+            if(studentData.computer >= 40){
+                document.write("<tr ><td>5</td><td>computer</td><td>"+studentData.computer+"</td></tr>");
+            }else{
+                document.write("<tr bgcolor='red'><td>5</td><td>computer</td><td>"+studentData.computer+"</td></tr>");
+            }
+        </script>
+        <tr height="70px">
+            <td>Total : <script>document.write(total)</script></td>
+            <td>Percentage : <script>document.write(total/5)</script></td>
+            <td><script>document.write(result)</script></td>
+        </tr>
+    </table>
+</body>
+</html>
