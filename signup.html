@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Signup</title>
+	</head>
+	<body>
+		<form action="">
+			<table border="0" width="400px">
+				<tr>
+					<td>Name</td>
+					<td>
+						<input type="text" name="uname" placeholder="Enter your name" />
+					</td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>
+						<input type="text" name="uemail" placeholder="Enter your email" />
+					</td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>
+						<input
+							type="password"
+							name="upass"
+							placeholder="Enter your password"
+						/>
+					</td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					<td>
+						<input type="radio" name="ugender" value="M" checked />Male
+						<input type="radio" name="ugender" value="F" />Female
+					</td>
+				</tr>
+
+				<tr>
+					<td>City</td>
+					<td>
+						<select name="ucity">
+							<option value="patan">Patan</option>
+							<option value="ahmedabad" selected>Ahmedabad</option>
+							<option value="rajkot">Rajkot</option>
+							<option value="surat">Surat</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Interest</td>
+					<td>
+						<select name="uint">
+							<optgroup label="front end">
+								<option value="html">HTML</option>
+								<option value="css">CSS</option>
+								<option value="bootstrap">Bootstrap</option>
+							</optgroup>
+							<optgroup label="back end">
+								<option value="php">PHP</option>
+								<option value="python">Python</option>
+								<option value="nodejs">Node JS</option>
+							</optgroup>
+							<optgroup label="other">
+								<option value="game">Game Development</option>
+								<option value="AR">AR</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input
+							type="submit"
+							name="submit"
+							value="Signup"
+							onclick="reg(event,this.form)"
+						/>
+					</td>
+				</tr>
+			</table>
+		</form>
+		<p id="msg"></p>
+	</body>
+	<script>
+		function reg(e, form) {
+			e.preventDefault();
+			let name = form.uname.value;
+			let email = form.uemail.value;
+			let pass = form.upass.value;
+			let gender = form.ugender.value;
+			let city = form.ucity.value;
+			let int = form.uint.value;
+
+			let msg = document.getElementById("msg");
+			msg.innerHTML =
+				"<table border='1'> <tr><td>Name</td><td>" +
+				name +
+				"</td></tr><tr><td>Email</td><td>" +
+				email +
+				"</td></tr><tr><td>Gender</td><td>" +
+				gender +
+				"</td></tr><tr><td>City</td><td>" +
+				city +
+				"</td></tr><tr><td>Interest</td><td>" +
+				int +
+				"</td></tr> </table>";
+		}
+	</script>
+</html>
