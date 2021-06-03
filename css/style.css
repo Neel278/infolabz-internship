@@ -1,0 +1,28 @@
+*{
+    color:violet;
+}
+p,
+h1 {
+	color: #0000ff;
+}
+
+h2.head {
+	color: #ff00ff;
+}
+
+.newclass {
+	color: #78fd56;
+	font-size: 25px;
+}
+
+#newh3 {
+	color: #6735a8;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+	color: red;
+	border: 1px solid blue;
+	border-radius: 3px;
+}

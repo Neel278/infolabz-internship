@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dynamic Table 2</title>
+	</head>
+	<body>
+		<!--  -->
+	</body>
+	<script>
+		/* Dynamic table structure */
+		var rows = 10;
+		var cols = 5;
+		let count = 1;
+		document.write("<center><table border width='50%'>");
+		//printing rows
+		for (let i = 1; i <= rows; i++) {
+			document.write(`<tr height="45px">`);
+			//printing cols
+			for (let j = 1; j <= cols; j++) {
+				document.write(
+					`<td ${j % 2 === 0 ? "bgcolor='yellow'" : ""}> ${count++} </td>`
+				);
+			}
+			document.write(`</tr>`);
+		}
+		document.write("</table></center>");
+	</script>
+</html>

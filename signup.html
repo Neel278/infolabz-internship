@@ -5,25 +5,26 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Signup</title>
+		<link rel="stylesheet" href="./signup.css" />
 	</head>
 	<body>
 		<form action="">
 			<table border="0" width="400px">
 				<tr>
-					<td>Name</td>
-					<td>
+					<td class="first_td">Name</td>
+					<td class="second_td">
 						<input type="text" name="uname" placeholder="Enter your name" />
 					</td>
 				</tr>
 				<tr>
-					<td>Email</td>
-					<td>
+					<td class="first_td">Email</td>
+					<td class="second_td">
 						<input type="text" name="uemail" placeholder="Enter your email" />
 					</td>
 				</tr>
 				<tr>
-					<td>Password</td>
-					<td>
+					<td class="first_td">Password</td>
+					<td class="second_td">
 						<input
 							type="password"
 							name="upass"
@@ -32,16 +33,16 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Gender</td>
-					<td>
+					<td class="first_td">Gender</td>
+					<td class="second_td">
 						<input type="radio" name="ugender" value="M" checked />Male
 						<input type="radio" name="ugender" value="F" />Female
 					</td>
 				</tr>
 
 				<tr>
-					<td>City</td>
-					<td>
+					<td class="first_td">City</td>
+					<td class="second_td">
 						<select name="ucity">
 							<option value="patan">Patan</option>
 							<option value="ahmedabad" selected>Ahmedabad</option>
@@ -51,8 +52,8 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Interest</td>
-					<td>
+					<td class="first_td">Interest</td>
+					<td class="second_td">
 						<select name="uint">
 							<optgroup label="front end">
 								<option value="html">HTML</option>
@@ -71,10 +72,11 @@
 						</select>
 					</td>
 				</tr>
-				<tr>
-					<td></td>
-					<td>
+				<tr id="reg_tr">
+					<td class="first_td" id="reg_first_td"></td>
+					<td class="second_td" id="reg_second_td">
 						<input
+							id="reg_btn"
 							type="submit"
 							name="submit"
 							value="Signup"
@@ -83,8 +85,8 @@
 					</td>
 				</tr>
 			</table>
+			<p id="msg"></p>
 		</form>
-		<p id="msg"></p>
 	</body>
 	<script>
 		function reg(e, form) {
@@ -98,15 +100,15 @@
 
 			let msg = document.getElementById("msg");
 			msg.innerHTML =
-				"<table border='1'> <tr><td>Name</td><td>" +
+				"<table border='1'> <tr><td class='first_td'>Name</td><td class='second_td second_table_td'>" +
 				name +
-				"</td></tr><tr><td>Email</td><td>" +
+				"</td></tr><tr><td class='first_td'>Email</td><td class='second_td second_table_td'>" +
 				email +
-				"</td></tr><tr><td>Gender</td><td>" +
+				"</td></tr><tr><td class='first_td'>Gender</td><td class='second_td second_table_td'>" +
 				gender +
-				"</td></tr><tr><td>City</td><td>" +
+				"</td></tr><tr><td class='first_td'>City</td><td class='second_td second_table_td'>" +
 				city +
-				"</td></tr><tr><td>Interest</td><td>" +
+				"</td></tr><tr><td class='first_td'>Interest</td><td class='second_td second_table_td'>" +
 				int +
 				"</td></tr> </table>";
 		}

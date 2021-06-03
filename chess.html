@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dynamic Table 2</title>
+	</head>
+	<body>
+		<!--  -->
+	</body>
+	<script>
+		/* Chess board structure */
+		var cells = 8;
+		document.write("<center><table border='1' width='560px'>");
+		//printing rows
+		for (let i = 1; i <= cells; i++) {
+			document.write(`<tr>`);
+			//printing cols
+			for (let j = 1; j <= cells; j++) {
+				document.write(
+					`<td ${(i + j) % 2 == 0 ? "bgcolor='black'" : ""} height='70px'></td>`
+				);
+			}
+			document.write(`</tr>`);
+		}
+		document.write("</table></center>");
+	</script>
+</html>
