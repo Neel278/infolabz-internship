@@ -1,0 +1,28 @@
+.myform {
+    height: 450px;
+    width: 400px;
+    border: 1px solid red;
+    margin: 100px auto;
+    text-align: center;
+    box-shadow: 1px 1px 20px red;
+}
+
+.myform h1{
+    color:#ff0000;
+    text-align: center;
+    padding: 25px;
+}
+
+.myform input[type="text"],.myform input[type="password"],.myform input[type="submit"]{
+    border: 1px solid red;
+    color: salmon;
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 18px;
+}
+.myform input[type="submit"]{
+    width: 86%;
+    background-color: red;
+    color: white;
+}
